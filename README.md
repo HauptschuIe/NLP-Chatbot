@@ -1,6 +1,8 @@
 # NLP-Chatbot
 
-## In bot1 Ordern:
+## In bot1 directory:
+
+### install dependencies
 
     $ virtualenv <env_name>
 
@@ -8,11 +10,7 @@
 
     (<env_name>)$ pip install -r path/to/requirements.txt
 
-### Train Model
-    rasa train
-
-### Installation
-    python -m venv ./venv
+### rasa installation
 
     .\venv\Scripts\activate
 
@@ -22,18 +20,20 @@
 
     rasa init
 
-### Communication in CLI
+### train model
+    rasa train
+
+### communication in CLI
     rasa shell
 
-### running Rasa endpoints:
-    .\venv\Scripts\activate
+### running rasa endpoints:
     
     rasa run actions
     
     rasa run --cors "*" --enable-api
     
     
-## In bot1ui Ordern:
+## in bot1ui directory:
 
 ### install dependencies
     npm i
