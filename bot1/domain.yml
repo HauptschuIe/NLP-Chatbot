@@ -1,0 +1,87 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - weather
+  - sunrise
+  - sunset
+  - wind
+  - humidity
+
+entities:
+  - city
+  - date
+
+slots:
+  city:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - entity: city
+        type: from_entity
+  date:
+    type: categorical
+    initial_value: today
+    influence_conversation: false
+    mappings:
+      - entity: date
+        type: from_entity
+        values:
+          - tomorrow
+          - today
+
+responses:
+  utter_please_rephrase:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_greet:
+    - text: "Hey! How can I help you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, how can I help you?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_weather:
+    - text: "{date} the temperature in {city} is {temp}°C with {description}."
+
+  utter_sunrise:
+    - text: "Today's sunrise in {city} was at {sunrise_localtime} localtime."
+
+  utter_sunset:
+    - text: "Today's sunset in {city} is at {sunset_localtime} localtime."
+
+  utter_wind:
+    - text: "There is a {degree_description} wind in {city} with a wind speed of {speed} km/h."
+
+  utter_humidity:
+    - text: "Today's humidity in {city} is {humidity} %."
+
+actions:
+  - action_weather_api
+  - action_sunrise_api
+  - action_sunset_api
+  - action_wind_api
+  - action_humidity_api
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

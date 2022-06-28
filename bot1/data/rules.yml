@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Show forecast anytime the user asks for it
+    steps:
+      - intent: weather
+      - action: action_weather_api
+
+  - rule: Show Sunrise time
+    steps:
+      - intent: sunrise
+      - action: action_sunrise_api
+
+  - rule: Show Sunset time
+    steps:
+      - intent: sunset
+      - action: action_sunset_api
+
+  - rule: Show Wind
+    steps:
+      - intent: wind
+      - action: action_wind_api
+
+  - rule: Show Humidity
+    steps:
+      - intent: humidity
+      - action: action_humidity_api
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_please_rephrase

@@ -1,0 +1,22 @@
+.wrapper {
+    margin: 0;
+}
+
+.teaser {
+    font-family:'Courier New';
+    font-size: xx-large;
+    font-weight: 600;
+    position: absolute;
+    left: 35%;
+    bottom: 4vh;
+}
+
+.arrow {
+    transform: scaleX(-1) rotate(260deg);
+    position: absolute;
+    left: 40%;
+    bottom: 10vh;
+}
+.teaser span {
+    font-size: 50px;
+}

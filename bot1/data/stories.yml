@@ -1,0 +1,64 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: weather
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: weather
+      - action: action_weather_api
+
+  - story: sunrise
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: sunrise
+      - action: action_sunrise_api
+
+  - story: sunset
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: sunset
+      - action: action_sunset_api
+
+  - story: wind
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: wind
+      - action: action_wind_api
+
+  - story: humidity
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: humidity
+      - action: action_humidity_api

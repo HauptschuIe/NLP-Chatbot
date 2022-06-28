@@ -1,0 +1,22 @@
+# Installation
+python -m venv ./venv
+.\venv\Scripts\activate
+pip install -U --user pip
+pip install rasa
+rasa init
+
+# Communication in CLI
+rasa shell
+
+# running Rasa endpoints:
+.\venv\Scripts\activate
+rasa run actions
+rasa run --cors "*" --enable-api
+
+
+# blocked port
+netstat -ano | findstr :5005
+taskkill /PID <id> /F
+
+# API Key
+86102def3d3cbcd7acb8864254af9a2f

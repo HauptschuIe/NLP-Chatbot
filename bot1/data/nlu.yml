@@ -1,0 +1,233 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: weather
+    examples: |
+      - what's the weather in [London](city)
+      - i want to know the weather for today in [Barcelona](city)
+      - tell me the weather forecast in [Vienna](city)
+      - hows the weather today in [A Coruña](city)
+      - can you tell me the weather in [Madrid](city) today?
+      - i am interested in the forecast in [Sevilla](city) today
+      - could you tell me the weather today in [Rabat](city)?
+      - what is the temperature in [Milos](city) today?
+      - do you know how many degrees are today in [Athens](city)?
+      - i would like to know the forecast in [Rome](city)
+      - tell me the temperature today in [Tokyio](city)
+      - i was wondering what's the forecast for today in [New York](city)
+      - i would be interested in the degrees today in [Paris](city)
+      - i was wondering what is the forecast prediction for today in [Milano](city)
+      - may i know what is the weather for today in [Budapest](city)?
+      - weather today in [Helsinki](city) please
+      - is it going to be hot today in [Palma de Mallorca](city)?
+      - can you share the weather forecast today in [Bratislava](city)?
+      - do you know the temperature for today in [El Cairo](city)?
+      - what is the weather today in [Palma](city)
+      - What is the temperature?
+      - what is the temperature [tomorrow](date) in [Tokyo](city)?
+      - what is [tommorow's](date) weather in [Delhi](city)?
+      - what is the weather like [tomorrow](date)?
+      - how is the weather [tomorrow](date) in [Shanghai](city)?
+      - I would like to know the temperature [tomorrow](date) in [Dhaka](city)
+      - I was wondering about tomorrows weather in [Mexico City](city)
+
+  - intent: sunrise
+    examples: |
+      - when is the sunrise in [Rottenburg](city) today?
+      - when is the sun rising in [Tübingen](city)?
+      - i would like to know when the sun rises
+      - tell me when the sun is rising
+      - do you know when the sunrise in [Tübingen](city) is today?
+      - when is the sunrise in [Tübingen](city) today?
+      - when was the sunrise in [Palma De Mallorca](city) this morning?
+      - when was the sunrise today?
+      - when was today's sunrise in [Tübingen](city)?
+      - when did the sun rise today?
+
+  - intent: sunset
+    examples: |
+      - when is the sunset in [Stuttgart](city) today?
+      - when is the sunset in [Palma de Mallorca](city) tonight?
+      - when is the sun setting in [Reutlingen](city)?
+      - i would like to know when the sunset is
+      - tell me when the sun is setting
+      - when does the sun set today
+      - do you know when the sunset in [Tübingen](city) is today?
+      - when is the sunset in [Tübingen](city) today?
+      - when was the sunset today?
+      - when was today's sunset in [Tübingen](city)?
+      - when did the sun set today?
+
+  - intent: wind
+    examples: |
+      - how windy is it in [Munich](city) today?
+      - how windy is it in [Herrenberg](city)?
+      - is it windy today?
+      - how fast is the wind?
+      - what is the wind speed?
+      - what is the speed of the wind?
+      - i would like to know the wind speed
+      - can you share the wind speed in [Tübingen](city) please
+      - do you know the wind speed in [Tübingen](city) today?
+
+  - intent: humidity
+    examples: |
+      - what is the humidity in [Tübingen](city) today?
+      - what is the humidity in [Berlin](city)?
+      - it is humid today?
+      - is it sultry today?
+      - how humid is it at the moment?
+      - how humid is it right now?
+      - what is the humidity in [Berlin](city)?
+      - what is humidity in [Berlin](city)?
+      - how high is the humidity in [Kairo](city)?
+      - how high is the humidity right now?
+      - is it going to be humid today?
+      - can you share me the humidity for today please?
+      - do you know the humidity for [Tübingen](city)?
+      - i would like to know the humidity
+
+  - synonym: speed
+    examples: |
+      - velocity
+
+  - synonym: humid
+    examples: |
+      - sultry
+      - humidity
+
+  - synonym: Herrenberg
+    examples: |
+      - herrenberg
+
+  - synonym: Tübingen
+    examples: |
+      - tübingen
+      - Tuebingen
+      - tuebingen
+
+  - synonym: Berlin
+    examples: |
+      - berlin
+
+  - synonym: Reutlingen
+    examples: |
+      - reutlingen
+
+  - synonym: Rottenburg
+    examples: |
+      - rottenburg
+
+  - synonym: Munich
+    examples: |
+      - munich
+      - muenchen
+      - Muenchen
+      - München
+      - münchen
+
+  - synonym: wind
+    examples: |
+      - windy
+
+  - synonym: sunrise
+    examples: |
+      - sun rise
+      - sun rising
+
+  - synonym: today
+    examples: |
+      - later
+      - today
+      - later today
+      - going to
+      - currently
+      - now
+      - current
+  - synonym: tomorrow
+    examples: |
+      - tomorrow
+      - tommorow's
+      - tomorrows

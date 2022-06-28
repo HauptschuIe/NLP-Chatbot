@@ -1,0 +1,88 @@
+.message {
+    width: 300px;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+  }
+  
+  .message--content {
+    width: 100%;
+    display: flex;
+  }
+  
+  .message--content.sent {
+    justify-content: flex-end;
+  }
+  
+  .message--content.sent .message--avatar {
+    display: none;
+  }
+  
+  .message--avatar {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/assets/avatar-default-aa2eab7684294781f93bc99ad394a0eb3249c5768c21390163c9f55ea8ef83a4.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 15px;
+  }
+  
+  .message--text {
+    padding: 17px 20px;
+    border-radius: 6px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    -webkit-font-smoothing: subpixel-antialiased;
+    word-wrap: break-word;
+    width: calc(100% - 90px);
+  }
+  
+  .message--content.sent .message--text {
+    color: white;
+    background-color: #68b4cc;
+    max-width: calc(100% - 120px);
+    word-wrap: break-word;
+  }
+  
+  .message--content.received .message--text {
+    color: #263238;
+    background-color: #f4f7f9;
+    margin-right: 40px;
+  }
+  
+  .message--emoji {
+    font-size: 40px;
+  }
+  
+  .message--file {
+    background: white;
+    border: solid 1px #CCCDD1;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .message--file p {
+    margin: 0px 0px 0px 10px;
+    color: rgba(86, 88, 103, 0.6);
+  }
+  
+  .message--file .user-input--file-icon:hover path {
+    fill: rgba(86, 88, 103, 0.3);
+  }
+  
+  @media (max-width: 450px) {
+    .message {
+      width: 80%;
+    }
+  }
