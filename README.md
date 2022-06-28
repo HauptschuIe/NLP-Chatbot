@@ -1,5 +1,7 @@
 # NLP-Chatbot
 
+![architecture](https://github.com/HauptschuIe/NLP-Chatbot/blob/main/Abfrage.png?raw=true "Architecture")
+
 ## In bot1 directory:
 
 ### install dependencies
